@@ -1,0 +1,215 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a202c; /* Hitam gelap */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #6b46c1; /* Ungu tua */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header img {
+    vertical-align: middle;
+}
+
+header nav a {
+    color: #ecc94b; /* Emas muda */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #d69e2e; /* Emas lebih terang saat hover */
+}
+
+/* Main Content Styles */
+main {
+    min-height: calc(100vh - 200px); /* Adjust based on header and footer height */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+main h1 {
+    color: #ecc94b; /* Emas untuk judul */
+    margin-bottom: 2rem;
+}
+
+main .max-w-md {
+    background-color: #4a5568; /* Ungu sedang */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+#converter-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ecc94b; /* Emas untuk label */
+}
+
+#converter-form .amount-input {
+    display: flex;
+    align-items: center;
+}
+
+#converter-form input,
+#converter-form select {
+    width: 100%;
+    padding: 0.75rem; /* Padding lebih besar */
+    border-radius: 0.375rem;
+    background-color: #2d3748; /* Hitam lebih gelap untuk input */
+    border: 1px solid #4a5568;
+    color: #ffffff;
+    font-size: 1.1rem; /* Ukuran font lebih besar */
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#converter-form input:focus,
+#converter-form select:focus {
+    border-color: #ecc94b; /* Emas saat fokus */
+    background-color: #2a3344;
+    outline: none;
+    box-shadow: 0 0 5px rgba(234, 179, 8, 0.5); /* Efek glow */
+}
+
+#converter-form input.rounded-l-lg {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#converter-form span {
+    background-color: #2d3748;
+    padding: 0.75rem;
+    border: 1px solid #4a5568;
+    border-left: none;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    font-size: 1.1rem;
+}
+
+#converter-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #ecc94b; /* Emas untuk tombol */
+    color: #1a202c; /* Hitam gelap untuk teks tombol */
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#converter-form button:hover {
+    background-color: #d69e2e; /* Emas lebih terang saat hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+#result {
+    font-size: 1.25rem;
+    min-height: 1.5rem;
+    margin-top: 1rem;
+    color: #ecc94b; /* Emas untuk hasil */
+    transition: opacity 0.5s ease;
+}
+
+#loading {
+    font-size: 1.25rem;
+    min-height: 1.5rem;
+    margin-top: 1rem;
+    color: #ecc94b;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #6b46c1; /* Ungu tua */
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer p {
+    color: #ecc94b; /* Emas untuk teks footer */
+}
+
+footer a {
+    color: #d69e2e; /* Emas lebih terang untuk link */
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #f6e05e; /* Emas sangat terang saat hover */
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    header nav a {
+        display: inline-block;
+        margin: 0;
+    }
+
+    main .max-w-md {
+        margin: 0 1rem;
+    }
+}
+
+@media (min-width: 641px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
